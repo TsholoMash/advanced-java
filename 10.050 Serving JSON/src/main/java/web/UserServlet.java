@@ -1,6 +1,7 @@
 package web;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -30,8 +31,11 @@ public class UserServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		List<User> users = List.of(new User("Neptune", "Hello"), new User("Morpheus", "xyz"));
+		var user1 = new User("Neptune", "Hello");
+		var user2 = new User("Morpheus", "xyz");
+		List<User> users = new ArrayList<User>();
+		users.add(user1);
+		users.add(user2);
 		
 		Gson gson = new Gson();
 		
