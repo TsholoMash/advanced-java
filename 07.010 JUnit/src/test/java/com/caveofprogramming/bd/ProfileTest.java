@@ -16,6 +16,6 @@ public class ProfileTest {
 
 		var dbName = props.getProperty("database");
 
-		assertEquals("dbName incorrect", "peopletest", dbName);
+		assertEquals("dbName incorrect", "people", dbName);
 	}
 }
